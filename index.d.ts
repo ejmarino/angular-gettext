@@ -5,7 +5,12 @@
 
 /// <reference types="angular" />
 
-declare namespace ng.gettext {
+declare module 'angular-gettext' {
+  export import gettextCatalog = ngGettext.gettextCatalog;
+  export import gettextFunction = ngGettext.gettextFunction;
+}
+
+declare namespace ngGettext {
   interface gettextCatalog {
 
     //////////////
@@ -46,7 +51,7 @@ declare namespace ng.gettext {
      *                   - Keys: Singular English strings (as defined in the source files)
      *                   - Values: Either a single string for signular-only strings or an array of plural forms.
      */
-    setStrings(language: string, strings: { [key: string]: string|string[] }): void;
+    setStrings(language: string, strings: { [key: string]: string | string[] }): void;
 
     /** Get the correct pluralized (but untranslated) string for the value of n. */
     getStringForm(string: string, n: number): string;
