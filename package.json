@@ -4,6 +4,7 @@
   "title": "Angular Gettext",
   "description": "Gettext support for Angular.js",
   "main": "index.js",
+  "typings": "index.d.ts",
   "directories": {
     "test": "test"
   },
